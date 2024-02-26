@@ -11,9 +11,9 @@ This plugin is built on top of the original Strapi Newsletter plugin, which you 
 Run any of the following commands inside your strapi directory to install the plugin:
 
 ```
-npm i strapi-newsletter-custom
+npm i strapi-newsletter-brevo
 
-yarn add strapi-newsletter-custom
+yarn add strapi-newsletter-brevo
 ```
 
 ## Usage 💄
