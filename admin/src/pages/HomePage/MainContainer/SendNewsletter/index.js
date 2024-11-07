@@ -1,6 +1,6 @@
 import React, { memo } from "react";
 import { Box, TabPanel, TextInput, Button, Alert } from "@strapi/design-system";
-import "react-quill/dist/quill.snow.css";
+import JoditEditor from "jodit-react";
 import { StyledQuill, StyledTypography } from "./styles";
 import { sendNewsletter } from "../../../../utils/api";
 
@@ -68,7 +68,7 @@ const SendNewsletter = () => {
         </Box>
         <Box paddingTop={4}>
           <StyledTypography>Email Body</StyledTypography>
-          <StyledQuill
+          <JoditEditor
             value={body}
             onChange={(text) => setBody(text)}
             placeholder="Type Your Newsletter Body Here"

@@ -1,5 +1,5 @@
 {
-  "name": "strapi-newsletter-brevo",
+  "name": "@vdtn359/strapi-newsletter-brevo",
   "version": "0.1.5",
   "description": "Send Newsletters Easily with Strapi",
   "strapi": {
@@ -15,7 +15,7 @@
   "dependencies": {
     "@mailchimp/mailchimp_marketing": "^3.0.75",
     "axios": "^0.27.2",
-    "react-quill": "^1.3.5",
+    "jodit-react": "4.1.2",
     "showdown": "^2.1.0",
     "sib-api-v3-sdk": "^8.5.0",
     "styled-components": "^5.3.5"

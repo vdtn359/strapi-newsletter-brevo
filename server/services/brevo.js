@@ -86,6 +86,9 @@ module.exports = () => ({
       const data = await apiInstance.createContact(createContact);
       return data;
     } catch (err) {
+      if (err.message === 'Bad Request') {
+             return false;
+      }
       console.log(err);
       throw new Error(err);
     }

@@ -21,10 +21,11 @@ module.exports = ({ strapi }) => ({
     }
 
     const { provider } = await getPluginStore().get({ key: "settings" });
+    let subscribed = true;
 
     switch (provider) {
       case "mailchimp": {
-        await strapi
+        subscribed = await strapi
           .plugin("strapi-newsletter")
           .service("mailchimp")
           .subscribeNewUser(body.email);
@@ -34,11 +35,15 @@ module.exports = ({ strapi }) => ({
     //my codee  for brevo
     switch (provider) {
       case "brevo": {
-        await strapi
+        subscribed = await strapi
           .plugin("strapi-newsletter")
           .service("brevo")
           .subscribeNewUser(body.email);
       }
+    }
+
+    if (!subscribed) {
+      return;
     }
 
     //end
